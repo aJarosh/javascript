@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8"/>
+	
+	<script type="text/javascript">
+		
+		function sprawdz()
+		{
+			var liczba = document.getElementById("pole").value;
+			
+			if (liczba>0) document.getElementById("wynik").innerHTML="Dodatnia";
+			else if (liczba<0) document.getElementById("wynik").innerHTML="Ujemna";
+			else if (liczba=="0") document.getElementById("wynik").innerHTML="Zero";
+			else document.getElementById("wynik").innerHTML="To nie liczba";
+		}
+	
+	
+	</script>
+	
+	<style>
+	
+	input[type=text] 
+	{
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		box-sizing: border-box;
+	}
+	label
+	{
+		text-align:center;
+		font-family: verdana;
+		font-size: 20px;
+	}
+	#wynik
+	{
+		background-color:black;
+		color:white;
+		text-align:center;
+		font-family: verdana;
+		font-size: 20px;
+	
+	}
+	#pole
+	{
+		background-color:black;
+		color:white;
+		text-align:center;
+		font-family: verdana;
+		font-size: 20px;
+	}
+	#spr
+	{
+		background-color:black;
+		color:white;
+		text-align:center;
+		font-family: verdana;
+		font-size: 20px;
+	}
+	#all
+	{
+		margin-left: auto;
+		margin-right: auto;
+		width: 320px;
+		padding: 10px;
+		border: 5px solid gray;
+	}
+	</style>
+</head>
+
+
+<body>
+	<div id="all">
+		<label>Wprowadż liczbę</label>
+		<input type="text" id="pole">
+		<input type="submit" value="Sprawdź" onclick="sprawdz()" id="spr"/>
+		
+		<div id="wynik"></div>
+	</div>
+</body>
+
+</html>
